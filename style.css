@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 2.6rem;
+    background-image: url(https://img.freepik.com/vetores-gratis/fundo-padrao-de-gatos_1425-90.jpg?w=740&t=st=1679512695~exp=1679513295~hmac=2df53b0c1f01bc0f359665980d86683cdab3bb337cb37aa25af29bfc821e3f5c);
+}
+
+.cronometro {
+    max-width: 1100px;
+    margin: auto;
+    overflow: auto;
+    padding: 0 2rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10vw;
+}
+
+h1 {
+    font-size: 2.5em;
+    display: inline-block;
+    border-right: 2px solid #965959;
+    padding-right: 3px;
+    max-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: pisca normal infinite .8s, escrever normal 5s steps(55) both;
+    color: #965959;
+}
+
+@keyframes escrever {
+    100% {
+        max-width: 100%;
+    }
+}
+
+.text {
+    color: #965959;
+    overflow: hidden;
+    margin: 0 auto;
+    display: inline-block;
+    font-weight: normal;
+    background: #dfcccc73;
+
+}
+
+.text:after {
+    content: '';
+    display: inline-block;
+    background-color: #362222;
+    margin-left: 2px;
+    height: 25px;
+    width: 4px;
+    animation: cursor 0.4s infinite;
+}
+
+@keyframes cursor {
+    0% {
+        opacity: 1;
+    }
+
+    49% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+.number {
+    font-size: 5.0rem;
+    transform: translate(-1%,-1%);
+    background: transparent;
+    color: #965959;
+    cursor: pointer;
+}
+.number:hover{
+    box-shadow: 0 0 15px #362222, inset 0 0 15px #362222;
+}
+
+#button-start {
+
+    display: inline-block;
+    background: #d17878;
+    padding: 0.6rem 1.0rem;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#button-stop {
+
+    display: inline-block;
+    background: #d17878;
+    padding: 0.6rem 1.0rem;
+    cursor: pointer;
+    border-radius: 3px;
+
+}
+
+#button-reset {
+
+    display: inline-block;
+    background: #d17878;
+    padding: 0.6rem 1.0rem;
+    cursor: pointer;
+    border-radius: 3px;
+
+}
+
+#button-start:hover {
+    opacity: 0.8;
+
+}
+
+#button-stop:hover {
+    opacity: 0.8;
+}
+
+#button-reset:hover {
+    opacity: 0.9;
+}
+
+button {
+    color: #dfcccc;
+}
+
+footer{
+    display: block;
+    position: fixed;
+    width: 100%;
+    bottom: 0vh;
+    left: 0;
+    background-color: #965959;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.7vw;
+    color: #dfcccc;
+
+}
